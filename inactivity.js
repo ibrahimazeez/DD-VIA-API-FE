@@ -16,7 +16,11 @@ function handleInactivity() {
   localStorage.clear();
 
   // Redirect the user to the login page (you can replace "login.html" with your actual login page URL)
-  window.location.href = 'index.html';
+
+    
+  // window.location.href = 'index.html';
+  window.location.href = 'https://ibrahimazeez.github.io/DD-VIA-API-FE/dist/index.html';
+  
 }
 
 // Add event listeners to capture user activity
