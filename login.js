@@ -4,7 +4,7 @@ document.getElementById('login-form').addEventListener('submit', function (event
   // Get the values entered by the user
 
   const endpointUrl = 'https://vigil.lendsqr.com/dd/v1/banks?limit=1000&page=1&sort_dir=ASC';
-  const redirectUrl = 'mandate.html';
+  const redirectUrl = '/dist/mandate.html';
   const apiKey = 'tE9SzsjKP2gmvsnYriLKIZc2bMgRG2x0eMd4o50A';
   console.log(redirectUrl)
   const username = document.getElementById('public-key').value;
