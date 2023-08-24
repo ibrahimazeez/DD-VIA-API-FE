@@ -1,12 +1,15 @@
+// import { baseUrl, apiKey } from './config.js'
+import { config }  from './variables.js';
+
 document.getElementById('login-form').addEventListener('submit', function (event) {
   event.preventDefault(); // Prevent the form from submitting normally
 
   // Get the values entered by the user
+  
+  const endpointUrl = config.apiUrl + '/v1/banks?limit=1000&page=1&sort_dir=ASC';
+  const redirectUrl = 'mandate.html';
+  console.log(config.apiKey)
 
-  const endpointUrl = 'https://vigil.lendsqr.com/dd/v1/banks?limit=1000&page=1&sort_dir=ASC';
-  const redirectUrl = 'https://ibrahimazeez.github.io/DD-VIA-API-FE/dist/mandate.html';
-  const apiKey = 'tE9SzsjKP2gmvsnYriLKIZc2bMgRG2x0eMd4o50A';
-  console.log(redirectUrl)
   const username = document.getElementById('public-key').value;
   const password = document.getElementById('secret-key').value;
 
@@ -22,7 +25,7 @@ document.getElementById('login-form').addEventListener('submit', function (event
     method: 'GET', // Replace with the appropriate HTTP method (GET, POST, PUT, etc.)
     headers: {
       'Authorization': basicAuthHeader,
-      'X-API-Key': apiKey
+      'X-API-Key': config.apiKey
 
     }
   })
@@ -38,3 +41,5 @@ document.getElementById('login-form').addEventListener('submit', function (event
       console.error('Fetch error:', error);
     });
 });
+
+
