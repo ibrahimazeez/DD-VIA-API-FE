@@ -1,7 +1,7 @@
 // inactivity.js
 
 // Set the inactivity timeout duration in milliseconds
-const inactivityTimeout = 60000; // 10 seconds
+const inactivityTimeout = 60000000; // 10 seconds
 
 let inactivityTimer;
 
@@ -17,9 +17,11 @@ function handleInactivity() {
 
   // Redirect the user to the login page (you can replace "login.html" with your actual login page URL)
 
-    
+
   // window.location.href = 'index.html';
-  window.location.href = 'https://ibrahimazeez.github.io/DD-VIA-API-FE/dist/index.html';
+  // window.location.href = 'https://ibrahimazeez.github.io/DD-VIA-API-FE/dist/index.html';
+  window.location.href = '/dist/index.html';
+
   
 }
 
