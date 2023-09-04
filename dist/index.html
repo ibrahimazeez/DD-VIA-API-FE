@@ -5,12 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Direct Debit</title>
-    <!-- <link rel="stylesheet" href="/dist/css/main.css"> -->
-    <link rel="stylesheet" href="https://ibrahimazeez.github.io/DD-VIA-API-FE/dist/css/main.css">
+    <link rel="stylesheet" href="/dist/css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/toast.css">
+    <!-- <link rel="stylesheet" href="https://ibrahimazeez.github.io/DD-VIA-API-FE/dist/css/main.css"> -->
 
 </head>
 
+<div class="toast">
+    <div class="toast-content">
+      <p class="toast-message"></p>
+      <button class="toast-close-button" aria-label="Close">&times;</button>
+    </div>
+  </div>
+
 <body>
+
     <div class="container">
         <div class="container-content">
             <div class="left-side">
@@ -36,7 +45,7 @@
                                             placeholder="Enter your secret key">
                                     </div>
                                     <div class="submit">
-                                        <button type="submit">Sign in</button>
+                                        <button id ="submit-button" type="submit">Sign in</button>
                                     </div>
                                 </div>
                             </form>
@@ -60,17 +69,21 @@
                     </div>
                 </div>
 
-                <div class="right-side">
-                    <div class="side-image">
-                        <img src="/assests/images/canvas.png" alt="Canvas-Image" class="canvas">
-                    </div>
+            </div>
+            <div class="right-side">
+                <div class="side-image">
+                    <img src="/assests/images/canvas.png" alt="Canvas-Image" class="canvas">
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- <script src="/login.js" type="text/javascript"></script> -->
-    <script src="https://ibrahimazeez.github.io/DD-VIA-API-FE/login.js" type="text/javascript"></script>
+    <script src="/login.js" type="module"></script>
+    <script src="/variables.js" type="module"></script>
+  <script type="module" src="/toast.js"></script>
+
+
+    <!-- <script src="https://ibrahimazeez.github.io/DD-VIA-API-FE/login.js" type="text/javascript"></script> -->
 
 
 </body>

@@ -1,0 +1,46 @@
+// Define variables for colors
+$success-color: #5cb85c;
+$error-color: #d9534f;
+$toast-background-color: #333;
+$toast-text-color: #fff;
+
+// Define styles for the toast
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: $toast-background-color;
+  color: $toast-text-color;
+  width: 18.75rem;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 1000;
+
+  &.success {
+    background-color: $success-color;
+  }
+
+  &.error {
+    background-color: $error-color;
+  }
+
+  .toast-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .toast-message {
+    margin: 0;
+  }
+
+  .toast-close-button {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 20px;
+    cursor: pointer;
+  }
+}
