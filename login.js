@@ -71,6 +71,7 @@ document.getElementById('login-form').addEventListener('submit', async function 
       
       const successMessage = data.message; // Replace 'message' with the actual key in your API response
       showToast(successMessage, 'success');
+      window.location.href = 'mandate.html'
       // Redirect the user or perform other actions as needed
     } else {
       // Handle an error response here
